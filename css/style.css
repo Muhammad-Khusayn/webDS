@@ -18,6 +18,13 @@
   --main-color: #02eeff;
 }
 
+.light-theme {
+  --bg-color: #fafafa;
+  --second-bg-color: #e4e5f1;
+  --text-color: #323946;
+  --main-color: #1f242d;
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -67,6 +74,16 @@ section {
 .navbar a:hover,
 .navbar a.active {
   color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+#icon {
+  width: 30px;
+  cursor: pointer;
 }
 
 #menu-icon {
@@ -288,6 +305,11 @@ span {
 
 .portfolio-layer h4 {
   font-size: 3rem;
+  color: #fafafa;
+}
+
+.portfolio-layer p {
+  color: #fafafa;
 }
 
 .portfolio-layer p {
