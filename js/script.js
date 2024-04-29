@@ -106,11 +106,9 @@ icon.onclick = function () {
   document.body.classList.toggle("light-theme");
   if (document.body.classList.contains("light-theme")) {
     icon.src = "./images/color_modes/crescent-moon.png";
-    mainImg.src = "./images/color_modes/DS-logo-main-light.png";
-    secondImg.src = "./images/color_modes/DS-logo-second-light.png";
+    secondImg.src = "./images/logo/main_logo_2light.png";
   } else {
     icon.src = "./images/color_modes/sun_button.png";
-    mainImg.src = "./images/logo/DS_new_logo.png";
-    secondImg.src = "./images/logo/DS_new_logo_second.png";
+    secondImg.src = "./images/logo/main_logo_2.png";
   }
 };
