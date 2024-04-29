@@ -59,9 +59,9 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 /*================================= typed js =====================================*/
 const typed = new Typed(".multiple-text", {
   strings: [
-    "25 years of experience",
-    "300 success stories",
-    "80% chance of scoring 6+ IELTS",
+    "27 years of experience",
+    "1000 success stories",
+    "95% chance of scoring 6+ IELTS",
   ],
   typeSpeed: 100,
   backSpeed: 40,
