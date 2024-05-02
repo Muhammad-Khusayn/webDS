@@ -60,7 +60,7 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 const typed = new Typed(".multiple-text", {
   strings: [
     "27 years of experience",
-    "1000 success stories",
+    "13000 success stories",
     "95% chance of scoring 6+ IELTS",
   ],
   typeSpeed: 100,
