@@ -332,6 +332,91 @@ span {
   color: var(--second-bg-color);
 }
 
+/* CSS for the ACHIVEMENTS part of the web page */
+
+.achivements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achivements h1 {
+  font-size: 3.4rem;
+}
+
+.scroller {
+  max-width: 1200px;
+}
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller__inner img {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  font-size: 2rem;
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
 .contact h2 {
   margin-bottom: 3rem;
 }
@@ -439,35 +524,16 @@ iframe {
   html {
     font-size: 55%;
   }
-}
 
-@media (max-width: 991px) {
-  .header {
-    padding: 2rem 3%;
+  .achivements h1 {
+    font-size: 3rem;
   }
-
-  section {
-    padding: 10rem 3% 2rem;
-  }
-
-  .courses {
-    padding-bottom: 7rem;
-  }
-
-  .portfolio {
-    padding-bottom: 7rem;
-  }
-
-  .contact {
-    min-height: auto;
-  }
-
-  .footer {
-    padding: 2rem 3%;
+  .scroller {
+    max-width: 800px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1068px) {
   #menu-icon {
     display: block;
   }
@@ -494,6 +560,43 @@ iframe {
     margin: 3rem 0;
   }
 
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 8rem 3% 2rem;
+  }
+
+  .courses {
+    padding-bottom: 7rem;
+  }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .achivements h1 {
+    font-size: 2.8rem;
+  }
+  .scroller {
+    max-width: 600px;
+  }
+
+  .scroller__inner img {
+    width: 250px;
+  }
+}
+
+.contact {
+  min-height: auto;
+}
+
+.footer {
+  padding: 2rem 3%;
+}
+
+@media (max-width: 768px) {
   .home {
     flex-direction: column;
   }
@@ -528,6 +631,17 @@ iframe {
     margin-bottom: 3rem;
   }
 
+  .achivements h1 {
+    font-size: 2.5rem;
+  }
+  .scroller {
+    max-width: 500px;
+  }
+
+  .scroller__inner img {
+    width: 220px;
+  }
+
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -537,11 +651,33 @@ iframe {
   .portfolio-container {
     grid-template-columns: 1fr;
   }
+
+  .achivements h1 {
+    font-size: 2rem;
+  }
+  .scroller {
+    max-width: 400px;
+  }
+
+  .scroller__inner img {
+    width: 200px;
+  }
 }
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .achivements h1 {
+    font-size: 2rem;
+  }
+  .scroller {
+    max-width: 300px;
+  }
+
+  .scroller__inner img {
+    width: 180px;
   }
 
   .contact form .input-box input {
@@ -556,6 +692,17 @@ iframe {
 
   .about-img img {
     width: 90vw;
+  }
+
+  .achivements h1 {
+    font-size: 2rem;
+  }
+  .scroller {
+    max-width: 250px;
+  }
+
+  .scroller__inner img {
+    width: 200px;
   }
 
   .footer {
